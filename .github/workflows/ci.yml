@@ -25,5 +25,5 @@ jobs:
 
     - name: Run tests 
       run: | 
-        pytest   
-     # pytest는 Python의 테스트 프레임워크로, 테스트를 실행하는 데 사용됩니다.
+        pytest -v -s 
+      # pytest는 Python의 테스트 프레임워크로, -v는 verbose 모드로 실행하여 더 많은 정보를 출력하고, -s는 print 문을 사용하여 출력된 내용을 보여줍니다.
