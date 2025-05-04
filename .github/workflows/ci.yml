@@ -1,0 +1,29 @@
+name: CI Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test: # Test 이름
+    runs-on: ubuntu-latest # 최신 우분투 환경에서 실행
+
+    steps: # 어떤 작업을 순서대로 실행할지 정의
+    - name: Checkout repository 
+      uses: actions/checkout@v3 # uses: actions/checkout@v3는 GitHub Actions에서 제공하는 액션으로, 리포지토리를 체크아웃하는 데 사용됩니다.
+
+    - name: Set up Python 
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.10.10
+
+    - name: Install dependencies 
+      run: |
+        pip install -r requirements.txt
+
+    - name: Run tests 
+      run: | 
+        pytest   
+     # pytest는 Python의 테스트 프레임워크로, 테스트를 실행하는 데 사용됩니다.
