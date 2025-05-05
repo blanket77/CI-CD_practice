@@ -11,6 +11,7 @@ my-app/
 ├── app.py                   # Flask 애플리케이션 진입점
 ├── requirements.txt         # 필요한 패키지 목록
 ├── test_app.py              # pytest로 작성된 테스트 코드
+├── run.py                   # run.py 실행
 ├── .github/
 │   └── workflows/
 │       └── ci.yml           # GitHub Actions CI 설정 파일

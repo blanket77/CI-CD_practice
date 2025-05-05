@@ -5,6 +5,6 @@ def test_home():
     client = app.test_client()
     response = client.get("/")
     
-    print("success")
+    print("!!GOOD!!")
     assert response.status_code == 200
     assert response.data == b"Hello, CI/CD!"
