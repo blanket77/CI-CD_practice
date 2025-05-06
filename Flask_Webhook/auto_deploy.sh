@@ -2,7 +2,7 @@
 
 IMAGE=blanket77/flask-cicd-app:latest # Replace with your Docker image name
 
-echo "🚀 Pulling image from DockerHub..."  
+echo "Pulling image from DockerHub..."  
 docker pull $IMAGE 
 
 echo "🧹 Cleaning up old container..."
