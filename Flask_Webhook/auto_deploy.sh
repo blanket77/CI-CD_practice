@@ -11,3 +11,6 @@ docker rm flask-app || true # Remove the container if it exists!
 
 echo "🔥 Running new container..." 
 docker run -d --name flask-app -p 8080:5000 blanket77/flask-cicd-app:latest
+
+echo "🧽 Cleaning up dangling images..."
+docker image prune -f  # Remove untagged (<none>) images without confirmation
