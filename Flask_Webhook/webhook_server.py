@@ -10,5 +10,5 @@ def webhook():
     # os.system이란 시스템 쉘에서 명령어를 실행하는 함수, cmd를 실행하는 것과 같음
     return '', 204
 
-if __name__ == '__main__':
+if __name__ == '__main__': # Flask 서버 실행
     app.run(port=6000)
