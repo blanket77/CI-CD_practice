@@ -31,4 +31,4 @@ jobs:
       if: success()
       run: |
         curl -X POST https://d667-223-194-47-109.ngrok-free.app/hook
-      # webhook을 통해 배포를 트리거하는 curl 명령어입니다.
+      # webhook을 통해 배포를 트리거하는 curl 명령어입니다. a
