@@ -7,4 +7,4 @@ def test_home():
     
     print("!!GOOD!!")
     assert response.status_code == 200
-    assert response.data == b"Hello, CI/CD!"
+    assert response.data == b"Hello, CI/CD! kimyouchan!!"
