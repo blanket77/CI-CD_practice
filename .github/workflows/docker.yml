@@ -1,8 +1,10 @@
 name: Build Docker Image
 
 on:
-  push:
-    branches: [ main ]
+  workflow_run:
+    workflows: ["CI Test"] # CI Test 워크플로우가 성공적으로 완료된 후에 이 워크플로우가 실행됩니다.
+    types:
+      - completed # CI Test 워크플로우가 완료된 후에 이 워크플로우가 실행됩니다.
 
 jobs:
   build:
@@ -27,3 +29,9 @@ jobs:
         context: .
         push: true
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/flask-cicd-app:latest
+    - name: Deploy via Webhook
+      if: success()
+      run: |
+          curl -X POST https://d667-223-194-47-109.ngrok-free.app/hook
+        # webhook을 통해 배포를 트리거하는 curl 명령어입니다. a
+        
