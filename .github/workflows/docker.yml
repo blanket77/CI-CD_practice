@@ -32,6 +32,6 @@ jobs:
     - name: Deploy via Webhook
       if: success()
       run: |
-          curl -X POST https://d667-223-194-47-109.ngrok-free.app/hook
+          curl -X POST https://7072-211-196-103-173.ngrok-free.app/hook
         # webhook을 통해 배포를 트리거하는 curl 명령어입니다. a
         
